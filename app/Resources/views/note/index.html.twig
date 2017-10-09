@@ -2,5 +2,25 @@
 
 {% block body %}
 
+    <div id="notes">
+        <div id="create">+</div>
+
+        {% if notes|length > 0 %}
+            {% for note in notes  %}
+                <div class="note">
+                    <textarea id="note-{{ note.getId() }}">{{ note.getContent() }}</textarea>
+                    <a href="#" id="remove-{{ note.getId() }}" class="remove-note">X</a>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+    </div>
+    <div class="clear-both"></div>
+{% endblock %}
+
+{% block javascripts %}
+
+    <script type="text/javascript" src="{{ asset('js/notes.js') }}"></script>
+
 {% endblock %}
 

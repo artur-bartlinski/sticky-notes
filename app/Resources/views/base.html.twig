@@ -4,10 +4,12 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Sticky Notes{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
+
+        <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
